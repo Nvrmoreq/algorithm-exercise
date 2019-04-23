@@ -3,7 +3,7 @@ package com.test.sort;
 /**
  * 快速排序
  * 算法：单轴快速排序，首先找到最后位做轴,判断轴后分两个区，一个小于一个大于，然后左右区分别递归排序，从左到右找到第一个比轴大的和从右到左找到第一个比轴小的数作交换
- *
+ * O（nlog2n）、O（n2）、O（nlog2n）、O（n） 不稳定
  * java基本类型排序使用快速排序
  */
 public class QuickSort {
@@ -20,7 +20,7 @@ public class QuickSort {
      * @param left
      * @param right
      */
-    static void sort(int[] arr, int left, int right){
+    public static void sort(int[] arr, int left, int right){
         if(left >= right) return;//边界判断，当数组只有一个值时直接返回
         //获取轴的值
         int mid = getPivot(arr, left, right);
@@ -38,7 +38,7 @@ public class QuickSort {
      * @param leftBound
      * @param rightBound
      */
-    static int getPivot(int[] arr, int leftBound, int rightBound){
+    public static int getPivot(int[] arr, int leftBound, int rightBound){
         //末位为轴
         int pivot = arr[rightBound];
         int left = leftBound;
@@ -67,7 +67,7 @@ public class QuickSort {
      * @param leftBound
      * @param rightBound
      */
-    static void partition(int[] arr, int leftBound, int rightBound){
+    public static void partition(int[] arr, int leftBound, int rightBound){
         //末位为轴
         int pivot = arr[rightBound];
         int left = leftBound;

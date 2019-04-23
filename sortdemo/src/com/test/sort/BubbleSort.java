@@ -1,7 +1,7 @@
 package com.test.sort;
 
 /**
- * 冒泡排序，练手Demo
+ * 冒泡排序
  * 简易版/优化版冒泡排序
  * O（n2）、O（n2）、O（n）、O（1）稳定
  */
@@ -10,12 +10,12 @@ public class BubbleSort {
     public static void main(String[] args) {
         //初始数组
         int arr[] = {9,3,1,4,6,8,7,5,2};
-        bubbleSort2(arr);
+        sort2(arr);
 
     }
 
     //优化第二版冒泡排序
-    public static void bubbleSort2(int arr[]){
+    public static void sort2(int arr[]){
         boolean flag = true;
         int lastIndex = arr.length;
         for (int i=1;i<arr.length;i++){
@@ -35,7 +35,7 @@ public class BubbleSort {
     }
 
     //优化第一版冒泡排序
-    public static void bubbleSort1(int arr[]){
+    public static void sort1(int arr[]){
         boolean flag = true;
         for (int i=1;i<arr.length;i++){
             for (int j=0;j<arr.length-1;j++){

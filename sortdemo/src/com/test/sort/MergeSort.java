@@ -1,7 +1,7 @@
 package com.test.sort;
 
 /**
- * 归并排序 练手Demo
+ * 归并排序
  * 算法：取一个相同大小的新数组，将老数组分为两个序列，左右比较，小的存到新数组，直到比较完成，判断左右数组那个数组剩下了值直接将剩下的值赋到新数组，将新数组复制回老数组
  * 两边已知有序版、升级版（截取一段排序）、 递归调用版
  * O（nlog2n）、O（nlog2n）、O（nlog2n）、O（n） 稳定
@@ -46,7 +46,7 @@ public class MergeSort {
      * @param leftPtr 右指针
      * @param leftPtr 右边界
      */
-    static void merge(int[] arr, int leftPtr, int rightPtr, int rightBound){
+    public static void merge(int[] arr, int leftPtr, int rightPtr, int rightBound){
         int mid = rightPtr-1;
         int[] temp = new int[rightBound-leftPtr+1];
 
@@ -70,7 +70,7 @@ public class MergeSort {
     /**
      * 两边已知有序，基数数组
      */
-    static void merge(int[] arr){
+    public static void merge(int[] arr){
         int mid = arr.length/2;
         int[] temp = new int[arr.length];
 
